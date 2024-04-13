@@ -1,0 +1,84 @@
+@use "../base/variables" as *;
+@use "../mixins/breakpoints" as *;
+.header {
+	padding-block: 28px;
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__toggle {
+		display: none;
+		border: none;
+		background: none;
+	}
+
+	.nav-list {
+		display: flex;
+		gap: 37px;
+		a {
+			color: $black;
+			&:hover {
+				color: $light-grey;
+			}
+		}
+	}
+
+	hr.header__hr {
+		width: 100%;
+		opacity: 0.2;
+		border: none;
+		height: 1px;
+		background-color: #979797;
+	}
+	.hide-desktop {
+		display: none;
+	}
+
+	@include for-phone-only {
+		.hide-mobile {
+			display: none;
+		}
+		.hide-desktop {
+			display: block;
+		}
+		.navigation {
+			display: none;
+			position: fixed;
+			top: 78px;
+			left: 0;
+			padding-inline: 24px;
+			padding-block: 48px;
+			width: 100%;
+			margin-left: auto;
+			background: $white;
+		}
+
+		.nav-list {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+			a {
+				color: $black;
+			}
+		}
+
+		.navigation[data-visible="true"] {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 20px;
+			overflow-y: hidden;
+		}
+
+		&__toggle {
+			display: block;
+		}
+
+		&__toggle .icon-close {
+			display: none;
+		}
+	}
+}

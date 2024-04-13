@@ -1,0 +1,44 @@
+@use "../base/variables" as *;
+
+.primary-button,
+.secondary-button {
+	padding-inline: 24px;
+	padding-block: 12px;
+
+	&:hover {
+		color: $black;
+		background-color: $light-grey;
+	}
+}
+
+.primary-button-inverted,
+.secondary-button-inverted {
+	background-color: transparent;
+	display: flex;
+	align-items: center;
+	// ** dynamically set ** //
+	// justify-content: space-between;
+	gap: 16px;
+	&:hover {
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+	}
+}
+
+.primary-button {
+	background-color: $black;
+	color: $white;
+}
+
+.primary-button-inverted {
+	color: $black;
+}
+
+.secondary-button {
+	color: $black;
+	background-color: $white;
+}
+
+.secondary-button-inverted {
+	color: $white;
+}

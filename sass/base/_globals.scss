@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+
+* {
+	margin: 0;
+}
+body {
+	font-family: "DM Sans", sans-serif;
+	font-weight: 400;
+	font-size: 0.938rem;
+	line-height: 1.563rem;
+}
+
+/*
+  5. Improve media defaults
+*/
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+button {
+	border: none;
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 700;
+}
+
+// Headings
+h1 {
+	font-size: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem); // 40px
+	letter-spacing: 4.17px;
+	line-height: 48px;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 1.5rem; // 24px
+	line-height: 25px;
+}
+h3 {
+	font-size: 1.125rem; // 18px
+	line-height: 25px;
+}
+h4 {
+	font-size: 0.75rem; // 12px
+	letter-spacing: 2px;
+	line-height: 16px;
+	text-transform: uppercase;
+}

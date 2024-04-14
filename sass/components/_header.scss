@@ -1,5 +1,5 @@
-@use "../base/variables" as *;
-@use "../mixins/breakpoints" as *;
+@use "../base/colors" as *;
+
 .header {
 	padding-block: 28px;
 	&__wrapper {
@@ -35,7 +35,7 @@
 		display: none;
 	}
 
-	@include for-phone-only {
+	@media (max-width: 766px) {
 		.hide-mobile {
 			display: none;
 		}

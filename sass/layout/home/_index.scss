@@ -1,0 +1,54 @@
+@use "../../base/colors" as *;
+@use "../../mixins/breakpoints" as *;
+
+.grid {
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"image"
+			"content";
+		align-items: center;
+
+		@include for-tablet-portrait-up {
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: "image content";
+		}
+	}
+
+	&__content {
+		background-color: $black;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		padding-inline: 33px;
+		grid-area: content;
+		padding-block: 72px;
+		color: $white;
+
+		p {
+			color: $light-grey;
+			opacity: 0.6;
+		}
+
+		&--underline {
+			position: relative;
+			&::after {
+				position: absolute;
+				content: "";
+				top: 0;
+				left: 33px;
+				width: 128px;
+				height: 6px;
+				background: $gradient;
+			}
+		}
+		&--content__white {
+			color: $black;
+			background-color: $white;
+			p {
+				color: $black;
+			}
+		}
+	}
+}

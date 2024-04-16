@@ -23,13 +23,12 @@ body {
   5. Improve media defaults
 */
 
-img,
-picture,
-video,
-canvas,
-svg {
-	display: block;
+img {
+	width: 100%;
 	max-width: 100%;
+	display: block;
+	height: 100%;
+	object-fit: fill;
 }
 button {
 	padding: 0;

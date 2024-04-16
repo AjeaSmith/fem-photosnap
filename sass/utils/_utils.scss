@@ -1,0 +1,26 @@
+@mixin story-background-images {
+	@for $i from 1 through 4 {
+		&--item#{$i} {
+			$image: "";
+
+			@if $i == 1 {
+				$image: "mountains.jpg";
+			} @else if $i == 2 {
+				$image: "cityscapes.jpg";
+			} @else if $i == 3 {
+				$image: "18-days-voyage.jpg";
+			} @else if $i == 4 {
+				$image: "architecturals.jpg";
+			}
+			background-size: cover;
+			background-position: bottom 25% center;
+			background-repeat: no-repeat;
+			background-image: linear-gradient(
+					to bottom,
+					rgba(0, 0, 0, 0.0001),
+					rgba(0, 0, 0, 0.6612)
+				),
+				url("/assets/stories/desktop/#{$image}");
+		}
+	}
+}

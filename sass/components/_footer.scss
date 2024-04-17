@@ -1,0 +1,95 @@
+@use "../base/colors" as *;
+@use "../mixins/breakpoints" as *;
+.footer {
+	background-color: $black;
+	padding-block: 64px;
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "logo cta";
+		place-content: space-between;
+
+		@include for-phone-only {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"logo"
+				"cta";
+			place-items: center;
+		}
+	}
+	&__logo {
+		grid-area: logo;
+		display: grid;
+		grid-template-areas:
+			"svg nav"
+			"social nav";
+
+		svg {
+			grid-area: svg;
+			@include for-phone-only {
+				margin-bottom: 32px;
+			}
+		}
+		@media (max-width: 840px) {
+			grid-template-areas:
+				"svg"
+				"nav"
+				"social";
+		}
+		@include for-phone-only {
+			grid-template-areas:
+				"svg"
+				"social"
+				"nav";
+			place-items: center;
+		}
+	}
+	&__social {
+		grid-area: social;
+		svg {
+			margin-right: 13px;
+			path {
+				fill: $white;
+			}
+		}
+	}
+	&__nav {
+		grid-area: nav;
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 19px;
+			a {
+				color: $white;
+			}
+		}
+		@media (max-width: 840px) {
+			margin-top: 32px;
+			margin-bottom: 72px;
+			ul {
+				flex-direction: row;
+			}
+		}
+		@include for-phone-only {
+			ul {
+				text-align: center;
+				flex-direction: column;
+			}
+		}
+	}
+	&__CTA {
+		grid-area: cta;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: end;
+		@include for-phone-only {
+			align-items: center;
+			gap: 34px;
+		}
+	}
+	&__copyright {
+		opacity: 0.6;
+		color: $light-grey;
+	}
+}

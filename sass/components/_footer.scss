@@ -46,6 +46,7 @@
 	}
 	&__social {
 		grid-area: social;
+		place-content: end;
 		svg {
 			margin-right: 13px;
 			path {

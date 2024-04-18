@@ -1,5 +1,5 @@
 @mixin story-background-images {
-	@for $i from 1 through 4 {
+	@for $i from 1 through 16 {
 		&--item#{$i} {
 			$image: "";
 
@@ -11,6 +11,33 @@
 				$image: "18-days-voyage.jpg";
 			} @else if $i == 4 {
 				$image: "architecturals.jpg";
+			}
+			@if $i == 5 {
+				$image: "world-tour.jpg";
+			} @else if $i == 6 {
+				$image: "unforeseen-corners.jpg";
+			} @else if $i == 7 {
+				$image: "king-on-africa.jpg";
+			} @else if $i == 8 {
+				$image: "trip-to-nowhere.jpg";
+			}
+			@if $i == 9 {
+				$image: "rage-of-the-sea.jpg";
+			} @else if $i == 10 {
+				$image: "running-free.jpg";
+			} @else if $i == 11 {
+				$image: "behind-the-waves.jpg";
+			} @else if $i == 12 {
+				$image: "calm-waters.jpg";
+			}
+			@if $i == 13 {
+				$image: "milky-way.jpg";
+			} @else if $i == 14 {
+				$image: "dark-forest.jpg";
+			} @else if $i == 15 {
+				$image: "somwarpet.jpg";
+			} @else if $i == 16 {
+				$image: "land-of-dreams.jpg";
 			}
 			background-size: cover;
 			background-position: bottom 25% center;

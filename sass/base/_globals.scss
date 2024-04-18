@@ -77,4 +77,7 @@ h4 {
 	letter-spacing: 2px;
 	line-height: 16px;
 	text-transform: uppercase;
+	@include for-phone-only {
+		font-size: 0.938rem;
+	}
 }

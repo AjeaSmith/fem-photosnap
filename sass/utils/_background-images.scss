@@ -1,3 +1,4 @@
+@use "../mixins/breakpoints" as *;
 @mixin story-background-images {
 	@for $i from 1 through 16 {
 		&--item#{$i} {
@@ -48,6 +49,15 @@
 					rgba(0, 0, 0, 0.6612)
 				),
 				url("/assets/stories/desktop/#{$image}");
+
+			@include for-phone-only {
+				background-image: linear-gradient(
+						to bottom,
+						rgba(0, 0, 0, 0.0001),
+						rgba(0, 0, 0, 0.6612)
+					),
+					url("/assets/stories/mobile/#{$image}");
+			}
 		}
 	}
 }

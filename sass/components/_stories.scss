@@ -1,6 +1,6 @@
 @use "../base/colors" as *;
 @use "../mixins/breakpoints" as *;
-@use "../utils/utils" as *;
+@use "../utils/background-images" as *;
 // Bottom stories grid
 .stories {
 	display: grid;

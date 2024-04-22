@@ -1,32 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Photosnap Website Challenge</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap" rel="stylesheet">
+  <!-- Add Prod css when deploying -->
+  <link rel="stylesheet" href="/sass/styles.scss">
+
+  <title>Pricing | Photosnap</title>
 </head>
+
 <body>
+  <header class="header header-container">
+    <div class="header__wrapper">
+      <a href="/index.html"><img class="header__logo" src="/assets/shared/desktop/logo.svg" alt="Photosnap"></a>
 
-  Stories
-  Features
-  Pricing
+      <button class="header__toggle" aria-controls="primary-navigation" aria-expanded="false">
+        <img class="icon-hamburger" src="/assets/shared/mobile/menu.svg" alt="presentation" aria-hidden="true" />
+        <img class="icon-close" src="/assets/shared/mobile/close.svg" alt="presentation" aria-hidden="true" />
+        <span class="visually-hidden">Menu</span>
+      </button>
 
-  Get an invite
+      <nav class="navigation" id="navigation">
+        <ul aria-label="Primary" role="list" class="nav-list">
+          <li>
+            <h4><a href="/stories/index.html">Stories</a></h4>
+          </li>
+          <li>
+            <h4><a href="/features/index.html">Features</a></h4>
+          </li>
+          <li>
+            <h4><a href="/pricing/index.html">Pricing</a></h4>
+          </li>
+        </ul>
+        <hr class="header__hr hide-desktop">
+        <button class="primary-button hide-desktop">
+          <h4>Get an Invite</h4>
+        </button>
+      </nav>
+      <button class="primary-button hide-mobile">
+        <h4>Get an Invite</h4>
+      </button>
+    </div>
+  </header>
+  <div id="overlay"></div>
+  <!-- main -->
+  <main>
+    <section class="grid">
+      <div class="grid__wrapper">
+        <div class="grid__content">
+          <div class="grid__content--underline">
+            <h1>Pricing</h1>
+            <p>Create a your stories, Photosnap is a platform for photographers and visual storytellers.
+              It’s the simple way to create and share your photos.</p>
+          </div>
+        </div>
+        <picture class="grid__img">
+          <source srcset="/assets/pricing/desktop/hero.jpg" media="(min-width: 1200px)" />
+          <source srcset="/assets/pricing/tablet/hero.jpg" media="(min-width: 768px)" />
+          <img src="/assets/pricing/mobile/hero.jpg" alt="presentation" />
+        </picture>
+      </div>
+    </section>
+    <section class="pricing">
+      <div class="pricing__wrapper">
+        <div class="pricing__switch">
+          <h3 class="monthly-heading">Monthly</h3>
+          <div class="toggle-switch">
+            <input type="checkbox" id="toggle" class="toggle-checkbox">
+            <label for="toggle" class="toggle-label"></label>
+          </div>
+          <h3 class="yearly-heading">Yearly</h3>
+        </div>
+        <div class="pricing__monthly container monthly-plans">
+          <div class="pricing__monthly--card">
+            <span class="heading">
+              <h2>Basic</h2>
+              <p>Includes basic usage of our platform. Recommended for new and aspiring photographers.</p>
+            </span>
+            <span class="price">
+              <h1>$19.00</h1>
+              <p>per month</p>
+            </span>
+            <button class="primary-button button">
+              <h4>Pick plan</h4>
+            </button>
+          </div>
+          <div class="pricing__monthly--card pricing__monthly--card--dark">
+            <span class="heading">
+              <h2>Pro</h2>
+              <p>More advanced features available. Recommended for photography veterans and professionals.</p>
+            </span>
+            <span class="price">
+              <h1>$39.00</h1>
+              <p>per month</p>
+            </span>
+            <button class="secondary-button button">
+              <h4>Pick plan</h4>
+            </button>
+          </div>
+          <div class="pricing__monthly--card">
+            <span class="heading">
+              <h2>Business</h2>
+              <p>Additional features available such as more detailed metrics. Recommended for business owners.</p>
+            </span>
+            <span class="price">
+              <h1>$99.00</h1>
+              <p>per month</p>
+            </span>
+            <button class="primary-button button">
+              <h4>Pick plan</h4>
+            </button>
+          </div>
+        </div>
+        <div class="pricing__yearly container yearly-plans hidden">
+          <div class="pricing__yearly--card">
+            <span class="heading">
+              <h2>Basic</h2>
+              <p>Includes basic usage of our platform. Recommended for new and aspiring photographers.</p>
+            </span>
+            <span class="price">
+              <h1>$190.00</h1>
+              <p>per year</p>
+            </span>
+            <button class="primary-button button">
+              <h4>Pick plan</h4>
+            </button>
+          </div>
+          <div class="pricing__yearly--card pricing__yearly--card--dark">
+            <span class="heading">
+              <h2>Pro</h2>
+              <p>More advanced features available. Recommended for photography veterans and professionals.</p>
+            </span>
+            <span class="price">
+              <h1>$390.00</h1>
+              <p>per year</p>
+            </span>
+            <button class="secondary-button button">
+              <h4>Pick plan</h4>
+            </button>
+          </div>
+          <div class="pricing__yearly--card">
+            <span class="heading">
+              <h2>Business</h2>
+              <p>Additional features available such as more detailed metrics. Recommended for business owners.</p>
+            </span>
+            <span class="price">
+              <h1>$990.00</h1>
+              <p>per year</p>
+            </span>
+            <button class="primary-button button">
+              <h4>Pick plan</h4>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="pricing__table">
+        the table
+      </div>
+    </section>
+  </main>
 
-  Pricing
-
-  Create a your stories, Photosnap is a platform for photographers and visual storytellers. 
-  It’s the simple way to create and share your photos.
-
-  Monthly
-  Yearly
-
-  Basic
-  Includes basic usage of our platform. Recommended for new and aspiring photographers.
-  $19.00 per month
   $190.00 per year
   Pick Plan
 
@@ -60,7 +200,7 @@
   Custom Analytics
 
   We're in Beta. Get your invite today!
-  
+
   Get an invite
 
   Home
@@ -72,5 +212,7 @@
 
   Copyright 2019. All Rights Reserved
 
+  <script type="module" src="/main.js"></script>
 </body>
+
 </html>

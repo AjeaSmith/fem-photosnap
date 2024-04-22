@@ -11,11 +11,10 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap" rel="stylesheet">
   <!-- Add Prod css when deploying -->
   <link rel="stylesheet" href="/sass/styles.scss">
-  <title>Home | Photosnap Website Challenge</title>
+  <title>Home | Photosnap</title>
 </head>
 
 <body>
-
   <header class="header header-container">
     <div class="header__wrapper">
       <a href="/index.html"><img class="header__logo" src="/assets/shared/desktop/logo.svg" alt="Photosnap"></a>
@@ -54,18 +53,20 @@
   <main>
     <section class="grid">
       <div class="grid__wrapper">
-        <div class="grid__content grid__content--underline">
-          <h1>Create and share your photo Stories</h1>
-          <p>Photosnap is a platform for photographers and visual storytellers. We make it
-            easy to share photos, tell stories and connect with others.</p>
-          <button class="secondary-button-inverted">
-            <h4>Get an invite</h4>
-            <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
-              <g fill="none" fill-rule="evenodd" stroke="#fff">
-                <path d="M0 7h41.864M35.428 1l6 6-6 6" />
-              </g>
-            </svg>
-          </button>
+        <div class="grid__content">
+          <div class="grid__content--underline">
+            <h1>Create and share your photo Stories</h1>
+            <p>Photosnap is a platform for photographers and visual storytellers. We make it
+              easy to share photos, tell stories and connect with others.</p>
+            <button class="secondary-button-inverted">
+              <h4>Get an invite</h4>
+              <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
+                <g fill="none" fill-rule="evenodd" stroke="#fff">
+                  <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                </g>
+              </svg>
+            </button>
+          </div>
         </div>
         <picture class="grid__img">
           <source srcset="/assets/home/desktop/create-and-share.jpg" media="(min-width: 1200px)" />
@@ -188,19 +189,19 @@
     <section class="features">
       <div class="features__wrapper container">
         <div class="features__item">
-          <img src="/assets/shared/responsive.png" alt="presentation" />
+          <img src="/assets/features/desktop/responsive.svg" alt="presentation" />
           <h3>100% Responsive</h3>
           <p>No matter which the device you’re on, our site is fully responsive and stories
             look beautiful on any screen.</p>
         </div>
         <div class="features__item">
-          <img src="/assets/shared/forever.png" alt="presentation" />
+          <img src="/assets/features/desktop/no-limit.svg" alt="presentation" />
           <h3>No Photo Upload Limit</h3>
           <p>Our tool has no limits on uploads or bandwidth. Freely upload in bulk and
             share all of your stories in one go.</p>
         </div>
         <div class="features__item">
-          <img src="/assets/shared/bullhorn.png" alt="presentation" />
+          <img src="/assets/features/desktop/embed.svg" alt="presentation" />
           <h3>Available to Embed</h3>
           <p>Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos,
             Google Maps, and more.</p>

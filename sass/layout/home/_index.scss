@@ -30,6 +30,9 @@
 		@include for-tablet-landscape-up {
 			padding-inline: 54px;
 		}
+		@include for-xl-desktop-up {
+			padding-inline: 112px;
+		}
 		p {
 			color: $light-grey;
 			opacity: 0.6;
@@ -42,11 +45,14 @@
 
 		&--underline {
 			position: relative;
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
 			&::after {
 				position: absolute;
 				content: "";
-				top: 0;
-				left: 33px;
+				top: -72px;
+				left: 0;
 				width: 128px;
 				height: 6px;
 				background: $gradient;
@@ -54,9 +60,11 @@
 					top: 50%;
 					transform: translateY(-50%);
 					width: 6px;
-					height: 309px;
-					left: 0;
-					right: 0;
+					height: 100%;
+					left: -54px;
+				}
+				@include for-xl-desktop-up {
+					left: -111px;
 				}
 			}
 		}
@@ -99,6 +107,9 @@
 		display: grid;
 		gap: 56px;
 
+		@include for-tablet-landscape-up {
+			grid-template-columns: repeat(2, 1fr);
+		}
 		@include for-desktop-up {
 			grid-template-columns: repeat(3, 1fr);
 		}

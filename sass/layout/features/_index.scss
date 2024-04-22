@@ -1,1 +1,39 @@
 @use "../../base/colors" as *;
+@use "../../mixins/breakpoints" as *;
+
+.cta {
+	padding-block: 68px;
+	background-position: center;
+	background-size: cover;
+	background-image: url("/assets/shared/mobile/bg-beta.jpg");
+	background-repeat: no-repeat;
+	color: $white;
+	position: relative;
+
+	&::after {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 6px;
+		height: 100%;
+		background: $gradient;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		@include for-tablet-landscape-up {
+			gap: 0;
+			justify-content: space-between;
+			flex-direction: row;
+		}
+	}
+	@include for-tablet-landscape-up {
+		background-image: url("/assets/shared/tablet/bg-beta.jpg");
+	}
+	@include for-desktop-up {
+		background-image: url("/assets/shared/desktop/bg-beta.jpg");
+	}
+}

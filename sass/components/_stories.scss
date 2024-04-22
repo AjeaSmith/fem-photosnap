@@ -4,7 +4,6 @@
 // Bottom stories grid
 .stories {
 	display: grid;
-	// grid-template-rows: repeat(auto, 375px);
 	@include for-tablet-landscape-up {
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -61,7 +60,8 @@
 		}
 	}
 
-	&__author, &__date {
+	&__author,
+	&__date {
 		font-size: 13px;
 		color: $light-grey;
 	}

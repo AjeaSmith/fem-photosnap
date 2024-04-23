@@ -6,6 +6,10 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	@include for-desktop-up {
+		margin-top: 120px;
+		margin-bottom: 160px;
+	}
 	&__wrapper {
 		display: grid;
 		grid-template-rows: 100px 1fr;
@@ -75,9 +79,9 @@
 		grid-template-rows: repeat(3, 1fr);
 		gap: 24px;
 		@include for-desktop-up {
-            gap: 30px;
+			gap: 30px;
 			position: relative;
-			grid-template-rows: 1fr 100px;
+			grid-template-rows: 1fr 36px;
 			grid-template-columns: repeat(3, 1fr);
 		}
 		&--card {
@@ -161,6 +165,57 @@
 		}
 	}
 }
+// TABLE
+.table {
+	margin-block: 64px;
+	@include for-tablet-landscape-up {
+		margin-block: 112px;
+	}
+	@include for-desktop-up {
+		margin-block: 160px;
+	}
+	h1 {
+		display: none;
+		text-align: center;
+		@include for-tablet-landscape-up {
+			margin-bottom: 64px;
+			display: block;
+		}
+		@include for-desktop-up {
+			margin-bottom: 56px;
+		}
+	}
+}
+td,
+th {
+	padding-left: 24px;
+	padding-block: 23px;
+}
+.comparison-table {
+	margin-inline: auto;
+	max-width: 731px;
+	width: 100%;
+	border-collapse: collapse;
+}
+.comparison-table tr {
+	border-bottom: 1px solid $light-grey;
+
+	&:nth-child(1) {
+		border-bottom: 1px solid black;
+	}
+}
+.comparison-table td {
+	text-align: center;
+}
+.comparison-table td img {
+	width: 16px;
+	height: 12px;
+	text-align: center;
+}
+.comparison-table .feature {
+	text-align: left;
+}
+
 .hidden {
 	display: none;
 }
